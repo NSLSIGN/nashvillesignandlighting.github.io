@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nashville Sign and Lighting LLC | Middle Tennessee</title>
   <meta name="description" content="Nashville Sign and Lighting LLC is a master licensed electrician fully insured, specializing in sign installation, lighting, and commercial electrical services in Nashville and Middle Tennessee." />
+
+  <!-- Favicon (uses your logo; adjust sizes as needed) -->
+  <link rel="icon" type="image/png" href="images/logoreview -->
+  <meta property="og:title" content="Nashville Sign and Lighting LLC" />
+  <meta property="og:description" content="Master licensed electrician - Sign installation, lighting, and commercial electrical services across Middle TN." />
+  <meta property="og:image" content="images/bucket-truck.jpg" />
+  <meta property="og:type" content="website" />
+
   <style>
     :root { --primary:#0f172a; --accent:#f59e0b; --bg:#f8fafc; }
     * { box-sizing:border-box; }
     body { margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:#111827; }
-    header { background:linear-gradient(135deg,var(--primary),#020617); color:#fff; padding:64px 16px; }
+    header { background:linear-gradient(135deg,var(--primary),#020617); color:#fff; padding:24px 16px 56px; }
     .container { max-width:1100px; margin:0 auto; padding:0 16px; }
     h1 { font-size:40px; margin:0 0 8px; }
     p.lead { font-size:18px; opacity:.95; }
@@ -19,28 +28,81 @@
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
     .card { background:#fff; border-radius:14px; padding:22px; box-shadow:0 10px 20px rgba(0,0,0,.08); }
     .card h3 { margin-top:0; }
-    .badge { display:inline-block; background:#e5e7eb; padding:6px 10px; border-radius:999px; font-size:12px; }
+    .badge { display:inline-block; background:#e5e7eb; color:#111827; padding:6px 10px; border-radius:999px; font-size:12px; }
     footer { background:#020617; color:#cbd5f5; padding:28px 0; }
     input, textarea, button { width:100%; padding:12px; margin:8px 0; border-radius:8px; border:1px solid #d1d5db; }
     button { background:var(--primary); color:#fff; font-weight:bold; cursor:pointer; }
     .two { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-    @media(max-width:700px){ .two{ grid-template-columns:1fr; } h1{ font-size:32px; } }
+    .success { background:#ecfdf5; color:#065f46; border:1px solid #a7f3d0; padding:12px; border-radius:8px; display:none; }
+    .error { background:#fef2f2; color:#991b1b; border:1px solid #fecaca; padding:12px; border-radius:8px; display:none; }
+
+    /* Header layout with logo */
+    .header-top {
+      display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:16px;
+    }
+    .brand {
+      display:flex; align-items:center; gap:12px;
+    }
+    .brand img.logo {
+      height:56px; width:auto; border-radius:6px; background:#fff; padding:4px; box-shadow:0 4px 10px rgba(0,0,0,.15);
+    }
+
+    /* Feature image (bucket truck) */
+    .feature {
+      background:#0b1024; /* deep navy behind image */
+      padding:0 0 56px;
+    }
+    .feature .img-wrap {
+      max-width:1100px; margin:0 auto; padding:0 16px;
+    }
+    .feature figure {
+      margin:0; position:relative;
+    }
+    .feature img {
+      width:100%; height:auto; display:block; border-radius:14px; box-shadow:0 18px 40px rgba(0,0,0,.4);
+    }
+    .feature figcaption {
+      color:#cbd5f5; font-size:14px; margin-top:10px; opacity:.9;
+    }
+
+    @media(max-width:700px){
+      .two{ grid-template-columns:1fr; }
+      h1{ font-size:32px; }
+      .brand img.logo { height:44px; }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <span class="badge">Master Licensed Electrician • Fully Insured</span>
+      <div class="header-top">
+        <div class="brand">
+          <!-- Your LOGO -->
+          <img class="logo" src="images/logo.png" alt="Nashville Sign and Lighting LLC logo" loading="pan>
+        </div>
+        <al:16293092819Call Now</a>
+      </div>
+
       <h1>Nashville Sign and Lighting LLC</h1>
-      <p class="lead">Call us: <strong>629-309-2819</strong><br>Commercial Sign, Lighting & Electrical Services • Middle Tennessee</p>
-      <a class="cta" href="tel:16293092819">Call Now</a> <a class="cta" style="margin-left:10px" href="#contact">Get a Free Quote</a>
-    </div>
+      <p class="lead">Call us: <strong>629-309-2819</strong><br>Commercial Sign, Lighting &amp; Electrical Services • Middle Tennessee</p>
+      <!-- Text changed per your request -->
+      <a class="cta" style="    </div>
   </header>
+
+  <!-- Featured work photo (bucket truck installing a sign) -->
+  <section class="feature">
+    <div class="img-wrap">
+      <figure>
+        <img src="images/bucket-truck.jpg"
+            site sign installation with our bucket truck crew.</figcaption>
+      </figure>
+    </div>
+  </section>
 
   <section>
     <div class="container grid">
-      <div class="card"><h3>Sign Installation & Repair</h3><p>Channel letters, LED signs, monument signs, troubleshooting & repairs.</p></div>
-      <div class="card"><h3>Lighting Services</h3><p>Parking lots, pole lights, LED retrofits, exterior & interior lighting.</p></div>
+      <div class="card"><h3>Sign Installation &amp; Repair</h3><p>Channel letters, LED signs, monument signs, troubleshooting &amp; repairs.</p></div>
+      <div class="card"><h3>Lighting Services</h3><p>Parking lots, pole lights, LED retrofits, exterior &amp; interior lighting.</p></div>
       <div class="card"><h3>Commercial Electrical</h3><p>Power distribution, service calls, upgrades, and maintenance.</p></div>
     </div>
   </section>
@@ -50,7 +112,7 @@
       <div>
         <h2>Why Choose Us</h2>
         <ul>
-          <li>Middle TN based & locally trusted</li>
+          <li>Middle TN based &amp; locally trusted</li>
           <li>Upfront pricing</li>
           <li>Quality workmanship</li>
           <li>On-time, professional crews</li>
@@ -65,32 +127,75 @@
   <section>
     <div class="container">
       <h2>Our Location</h2>
-      <iframe src="https://www.google.com/maps?q=Nashville,TN&output=embed" width="100%" height="300" style="border:0;border-radius:12px" loading="lazy"></iframe>
+      https://www.google.com/maps?q=Nashville,TN&output=embed</iframe>
     </div>
   </section>
 
   <section id="contact">
     <div class="container two">
       <div>
-        <h2>Request a Free Quote</h2>
+        <h2>Request a Quote</h2>
         <p>Tell us about your project and we’ll get back to you fast.</p>
       </div>
-      <form class="card" action="mailto:bigdrake2k@gmail.com" method="post" enctype="text/plain">
+
+      <!-- Formspree version (replace YOUR_FORM_ID) -->
+      https://formspree.io/f/YOUR_FORM_ID
+        <input type="hidden" name="_subject" value="New Quote Request - Nashville Sign & Lighting" />
+        <input type="hidden" name="_replyto" value="" />
+
         <input type="text" name="Name" placeholder="Your Name" required />
-        <input type="email" name="Email" placeholder="Your Email" required />
+        <input type="email" name="Email" placeholder="Your Email" required oninput="document.querySelector('input[name=_replyto]').value=this.value" />
         <input type="tel" name="Phone" placeholder="Your Phone" />
         <textarea name="Message" rows="4" placeholder="Project details"></textarea>
+
+        <!-- Honeypot to deter bots -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
         <button type="submit">Send Request</button>
+        <div id="form-success" class="success">Thanks! We received your request and will respond shortly.</div>
+        <div id="form-error" class="error">Sorry—something went wrong. Please try again or call 629-309-2819.</div>
       </form>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Nashville Sign and Lighting LLC • All Rights Reserved</p>
-    </div>
-  </footer>
+    <div class="container" style="display:flex; align-items:center; gap:12px;">
+      <img src="images/logo.png" alt="Nashville Sign and Lighting LLC" style="height:28px; width:auto; border-radius:4px; background:#fff; padding:2pxoter>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Progressive enhancement: AJAX submit for nicer UX
+    const form = document.getElementById('quote-form');
+    if (form) {
+      const success = document.getElementById('form-success');
+      const errorBox = document.getElementById('form-error');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        success.style.display = 'none';
+        errorBox.style.display = 'none';
+
+        const data = new FormData(form);
+
+        try {
+          const res = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            success.style.display = 'block';
+            form.reset();
+          } else {
+            errorBox.style.display = 'block';
+          }
+        } catch (err) {
+          errorBox.style.display = 'block';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
