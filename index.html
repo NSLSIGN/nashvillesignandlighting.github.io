@@ -2,201 +2,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nashville Sign and Lighting LLC | Signs • Lighting • Electrical</title>
 
-  <meta name="description" content="Nashville Sign and Lighting LLC—master licensed electrician for all types of signage, lighting, and electrical services (residential & commercial) across Middle Tennessee." />
-  <meta name="keywords" content="Nashville sign company, Nashville electrician, sign installation Nashville, lighting services Nashville, commercial electrical Nashville, residential electrical Nashville, Middle Tennessee signs" />
-
-  <!-- Open Graph / Social -->
+  <meta name="description" content="Nashville Sign and Lighting LLC — Master licensed electrician providing premium signage, lighting, and electrical services (residential & commercial) across Middle Tennessee." />
+  <meta name="keywords" content="Nashville sign company, sign installation, lighting services, electrician Nashville, electrical contractor, Middle Tennessee" />
+  <link rel="icon" type="image/jpeg" href="->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Nashville Sign and Lighting LLC" />
   <meta property="og:description" content="All types of signage, lighting services, and electrical—residential & commercial. Call 629-309-2819." />
   <meta property="og:image" content="images/truck.jpg" />
-  <meta property="og:site_name" content="Nashville Sign and Lighting LLC" />
-  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="images/Logo.jpeg"172a;   /* deep slate */
-      --accent:#f59e0b;    /* amber */
-      --bg:#f8fafc;        /* off white */
-      --ink:#111827;       /* dark text */
-      --muted:#6b7280;     /* gray text */
+  <style>
+    :root{
+      --ink:#0b1220;           /* deep ink */
+      --bg:#f7f9fc;            /* soft light */
+      --brand:#0f172a;         /* header gradient base */
+      --brand2:#020617;        /* header gradient end */
+      --accent:#ffb20f;        /* warm amber for CTAs */
+      --muted:#6b7280;         /* gray copy */
+      --card:#ffffff;          /* white cards */
+      --ring:rgba(0,0,0,.06);  /* subtle borders */
     }
-    *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--ink); font-family: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; }
 
-    /* Header */
-    header{ color:#fff; background:linear-gradient(135deg, var(--primary), #020617); }
-    .wrap{ max-width:1100px; margin:0 auto; padding:0 16px; }
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0 8px;
+    /* --- Top nav with phone --- */
+    .nav{
+      position:sticky; top:0; z-index:60;
+      background:linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#fff; border-bottom:1px solid rgba(255,255,255,.08);
+      backdrop-filter:saturate(140%) blur(6px);
     }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .brand img{ height:60px; width:auto; border-radius:8px; background:#fff; padding:4px; box-shadow:0 4px 12px rgba(0,0,0,.2); }
-    .callblock{ text-align:right; }
-    .callblock .phone-big{
-      margin:0; line-height:1.1; font-weight:800; font-size: clamp(24px, 4.6vw, 44px);
+    .wrap{ max-width:1200px; margin:0 auto; padding:0 20px; }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 0;
     }
-    .callblock .phone-big a{ color:#fff; text-decoration:none; }
-    .badges{ display:flex; gap:10px; margin-top:6px; flex-wrap:wrap; }
-    .badge{
-      display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px; background:#1f2937; color:#cbd5e1;
+    .brand{ display:flex; align-items:center; gap:12px }
+    .brand img{ height:44px; width:auto; border-radius:8px; background:#fff; padding:4px; box-shadow:0 2px 10px rgba(0,0,0,.25) }
+    .brand h1{ margin:0; font-size:18px; letter-spacing:.2px; }
+    .phone a{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border-radius:10px; text-decoration:none; color:#111; background:var(--accent); font-weight:800;
+      box-shadow:0 8px 22px rgba(0,0,0,.25);
     }
-    .hero{ padding:24px 0 56px; }
-    .hero h1{ margin:0 0 10px; font-size: clamp(26px, 5.4vw, 48px); }
-    .hero p{ margin:0; font-size: clamp(14px, 2.5vw, 18px); opacity:.95; }
-    .cta-row{ margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+    .phone .num{ font-size:clamp(16px, 2.6vw, 22px); }
+
+    /* --- Hero --- */
+    .hero{
+      position:relative; isolation:isolate;
+      background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.35)), url("images/truck.jpg") center/cover no-repeat;
+      min-height:56vh; color:#fff; display:grid; place-items:center; text-align:center;
+    }
+    .hero .content{ padding:64px 20px 72px }
+    .eyebrow{ display:inline-block; font-size:13px; letter-spacing:.08em; text-transform:uppercase; background:rgba(255,255,255,.12); padding:6px 10px; border-radius:999px; }
+    .hero h2{ margin:12px auto 10px; font-size: clamp(26px, 6vw, 56px); line-height:1.05; max-width:900px; }
+    .hero p{ margin:0 auto; max-width:820px; font-size: clamp(14px, 2.4vw, 18px); opacity:.96; }
+    .cta-row{ margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
     .cta{
-      background:var(--accent); color:#111; font-weight:700; padding:12px 18px; border-radius:10px; text-decoration:none;
-      box-shadow:0 10px 24px rgba(0,0,0,.22);
+      background:var(--accent); color:#111; font-weight:800; padding:12px 18px; border-radius:12px; text-decoration:none;
+      box-shadow:0 12px 28px rgba(0,0,0,.35);
     }
-    .cta.secondary{ background:#fff; color:#111; }
+    .cta.secondary{ background:#fff; color:#111 }
 
-    /* Feature image */
-    .feature{ background:#0b1024; padding:0 0 56px; }
-    .feature .wrap{ padding:0 16px; }
-    .feature figure{ margin:0; }
-    .feature img{ width:100%; height:auto; border-radius:14px; box-shadow:0 18px 40px rgba(0,0,0,.45); display:block; }
-    .feature figcaption{ color:#cbd5f5; font-size:14px; margin-top:10px; opacity:.9; }
+    /* --- Services (with pictograms) --- */
+    section{ padding:72px 0 }
+    .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:18px }
+    .service{
+      grid-column: span 4;
+      background:var(--card); border-radius:16px; padding:22px; box-shadow:0 12px 28px rgba(0,0,0,.06); border:1px solid var(--ring);
+      display:flex; gap:16px;
+    }
+    .service h3{ margin:0 0 6px; font-size:20px }
+    .service p{ margin:0; color:var(--muted); line-height:1.55 }
+    .icon{
+      min-width:56px; height:56px; border-radius:12px; display:grid; place-items:center; background:#0e1727; color:#fff;
+      box-shadow:0 10px 18px rgba(0,0,0,.2)
+    }
+    @media (max-width: 1000px){ .service{ grid-column: span 6 } }
+    @media (max-width: 620px){ .service{ grid-column: span 12 } }
 
-    /* Sections */
-    section{ padding:56px 0; }
-    .grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:18px; }
-    .card{ background:#fff; border-radius:14px; padding:22px; box-shadow:0 10px 20px rgba(0,0,0,.08); }
-    .card h3{ margin-top:0; }
-    .muted{ color:var(--muted); }
-    .check{ color:#059669; font-weight:700; margin-right:6px; }
+    /* --- Image Showcase (masonry-like) --- */
+    .showcase{ background:#0b1024; color:#eaf2ff; }
+    .sc-wrap{ max-width:1200px; margin:0 auto; padding:0 20px }
+    .sc-title{ margin:0 0 18px; font-size: clamp(22px, 4vw, 34px); }
+    .masonry{
+      columns: 3 280px; column-gap:16px;
+    }
+    .tile{
+      break-inside: avoid; margin:0 0 16px; background:#0e1530; border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,.08);
+    }
+    .tile img{ width:100%; height:auto; display:block; }
+    .tile figcaption{ padding:10px 12px; font-size:14px; color:#cbd5f5; }
 
-    /* Footer */
+    /* --- Story band --- */
+    .story{ background:linear-gradient(180deg, #eef2ff, #ffffff) }
+    .card{
+      background:#fff; border-radius:16px; padding:26px; border:1px solid var(--ring); box-shadow:0 10px 24px rgba(9,12,18,.06);
+    }
+    .stack{ display:grid; grid-template-columns: 1.25fr .75fr; gap:20px }
+    @media (max-width: 860px){ .stack{ grid-template-columns:1fr } }
+
+    /* --- Contact bar (links only) --- */
+    .contact-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px }
+    @media (max-width: 800px){ .contact-cards{ grid-template-columns:1fr } }
+    .contact-card{ background:#fff; border:1px solid var(--ring); border-radius:16px; padding:22px; box-shadow:0 10px 24px rgba(0,0,0,.06) }
+    .contact-card a{ color:inherit; text-decoration:none; font-weight:700 }
+    .muted{ color:var(--muted) }
+
+    /* --- Footer & sticky call --- */
     footer{ background:#020617; color:#cbd5f5; }
-    footer .footflex{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
-    footer img{ height:28px; width:auto; border-radius:4px; background:#fff; padding:2px; }
-
-    /* Sticky call bar (mobile) */
+    .foot{ display:flex; align-items:center; gap:12px; padding:24px 0; flex-wrap:wrap }
+    footer img{ height:28px; width:auto; border-radius:6px; background:#fff; padding:2px }
     .sticky-call{
-      position:fixed; bottom:0; left:0; right:0; display:none; z-index:50;
-      background:#111827; padding:8px 12px; border-top:1px solid rgba(255,255,255,.1);
+      position:fixed; left:0; right:0; bottom:0; z-index:70; display:none;
+      background:#0b1220cc; padding:8px 14px; border-top:1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(6px);
     }
-    .sticky-call a{
-      display:block; text-align:center; width:100%; background:var(--accent); color:#111; font-weight:800;
-      padding:12px 18px; text-decoration:none; border-radius:10px;
-    }
-
-    @media (max-width: 860px){
-      .sticky-call{ display:block; }
-      .hero{ padding-bottom:96px; } /* leave space for sticky bar */
-    }
+    .sticky-call a{ display:block; text-align:center; width:100%; background:var(--accent); color:#111; font-weight:900;
+      padding:12px 18px; text-decoration:none; border-radius:12px; }
+    @media (max-width: 860px){ .sticky-call{ display:block } }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="wrap">
-      <div class="topbar">
-        <div class="brand">
-          <img src="images/Logo.jpeg" alt="Nash        <div class="badges">
-              <span class="badge">Master Licensed Electrician</span>
-              <span class="badge">Fully Insured</span>
-              <span class="badge">Middle Tennessee</span>
-            </div>
-          </div>
-        </div>
-        <div class="callblock" aria-label="Call Nashville Sign and Lighting LLC">
-          <p class="phone-big"><a href="3092819629‑309‑2819</a></p>
-          <div class="cta-row">
-            <a class="cta" href="tel:+162930928      <a class="cta secondary" href="       </div>
-        </div>
-      </div>
-
-      <div class="hero">
-        <h1>Nashville Sign and Lighting LLC</h1>
-        <p>All types of outdoor & indoor signage • Lighting services • Full electrical (residential & commercial)</p>
+  <!-- Sticky top with phone -->
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <img src="images/Logo.jpeg" alt="Nashville Sign and Lighting LLC logo   </div>
+      <div class="phone">
+        <a href="tel:+16293092819" aria-label="Call Nashville Sign andwidth="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h2.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.02l-2.21 2.21z"/></svg>
+          <span class="num">629‑309‑2819</span>
+        </a>
       </div>
     </div>
-  </header>
+  </div>
 
-  <!-- Featured work photo -->
-  <section class="feature" aria-label="Featured work">
-    <div class="wrap">
-      <figure>
-        <img src="images/truck.jpg" alt="Bucket truck installing a commercial sign on a customer building"tion>
-      </figure>
-    </div>
+  <!-- Hero -->
+  <section class="hero" role="banner">
+    <div class="content">
+      <span class="eyebrow">Middle Tennessee • Since Day One</span>
+      <h2>Premium Signs, Lighting & Electrical — Done Right the First Time</h2>
+      <p>Outdoor & indoor signage • LED retrofits • Parking lot & security lighting • Master‑level electrical for homes & businesses.</p>
+      <div class="cta-row">
+        <a class="cta" href="tel:+09‑2819</a>
+        <a class="cta secondary" href="sms:+16293092819div>
   </section>
 
   <!-- Services -->
-  <section aria-labelledby="services-title">
+  <section>
     <div class="wrap">
-      <h2 id="services-title">Services</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Signage (Outdoor &amp; Indoor)</h3>
-          <p><span class="check">✔</span>Channel letters, LED signs, monuments, cabinet & panel signs<br/>
-             <span class="check">✔</span>New installs, retrofits, maintenance & repair<br/>
-             <span class="check">✔</span>Permitting guidance & site surveys</p>
-        </div>
-        <div class="card">
-          <h3>Lighting Services</h3>
-          <p><span class="check">✔</span>Parking lots, pole lights, wall packs, canopy & security lighting<br/>
-             <span class="check">✔</span>LED upgrades, troubleshooting & controls<br/>
-             <span class="check">✔</span>Interior & exterior lighting</p>
-        </div>
-        <div class="card">
-          <h3>Electrical — Residential &amp; Commercial</h3>
-          <p><span class="check">✔</span>Service calls, panels, circuits, and power distribution<br/>
-             <span class="check">✔</span>Upgrades, additions, and safety inspections<br/>
-             <span class="check">✔</span>Tenant build‑outs & preventative maintenance</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Drake -->
-  <section aria-labelledby="about-title" style="background:#eef2ff;">
-    <div class="wrap">
-      <h2 id="about-title">About the Owner</h2>
-      <div class="grid" style="grid-template-columns:1.2fr 1fr;">
-        <div class="card">
-          <h3>Drake Ross — Nashville Born & Raised</h3>
-          <p>Drake grew up in Nashville helping his grandpa in the sign business from an early age, learning the family trade hands‑on. Today, he’s a <strong>master licensed electrician</strong> who loves playing golf, serving others, and building long‑term relationships.</p>
-          <p>He has a strong relationship with God and treats every customer like he’s helping his own grandma—bringing honesty, craftsmanship, and care to each project.</p>
-          <div class="badges" style="margin-top:6px;">
-            <span class="badge">Family‑Owned</span>
-            <span class="badge">Quality Workmanship</span>
-            <span class="badge">On‑Time & Professional</span>
+        <div class="service">
+          <div class="icon" aria-hidden="true">
+            <!-- Sign icon -->
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M3 4h18v6H3V4zm2 2v2h14V6H5zm6 14v-6h2v6h5v2H6v-2h5z"/></svg>
+          </div>
+          <div>
+            <h3>All Types of Signage</h3>
+            <p>Channel letters, LED cabinets & monuments, directional, interior branding. New installs, retrofits, maintenance & repair.</p>
           </div>
         </div>
-        <div class="card">
-          <h3>Why Choose NSL</h3>
-          <p class="muted">Middle Tennessee’s trusted partner for signs, lighting, and electrical:</p>
-          <p><span class="check">✔</span>Upfront, straightforward pricing<br/>
-             <span class="check">✔</span>Clean job sites & safety first<br/>
-             <span class="check">✔</span>Locally owned & responsive</p>
-          <p><strong>Call or text:</strong> <a href="tel:+16293092819819</a></p>
+
+        <div class="service">
+          <div class="icon" aria-hidden="true">
+            <!-- Bulb icon -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M9 21h6v-1H9v1zm3-20a7 7 0 00-4 12.9V16a1 1 0 001 1h6a1 1 0 001-1v-2.1A7 7 0 0012 1z"/></svg>
+          </div>
+          <div>
+            <h3>Lighting Services</h3>
+            <p>Parking lots, pole lights, wall packs & security lighting. LED upgrades, controls, troubleshooting—inside & out.</p>
+          </div>
+        </div>
+
+        <div class="service">
+          <div class="icon" aria-hidden="true">
+            <!-- Electrical icon -->
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>
+          </div>
+          <div>
+            <h3>Electrical (Res & Comm)</h3>
+            <p>Service calls, panels, circuits, and power distribution. Upgrades, additions, build‑outs & preventative maintenance.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact (links only; no forms) -->
-  <section aria-labelledby="contact-title">
+  <!-- Image Showcase -->
+  <section class="showcase" aria-labelledby="work-title">
+    <div class="sc-wrap">
+      <h2 id="work-title" class="sc-title">Recent Work & Capabilities</h2>
+      <div class="masonry">
+        <!-- You can duplicate <figure class="tile"> blocks below as you add photos -->
+        <figure class="tile">
+          <img src="images/truck.jpg" alt="Bucket truck installing a commercial sign" loading="ring</figcaption>
+        </figure>
+
+        <figure class="tile">
+          <img src="images/Logo.jpeg" alt="NSL logo markou can trust—family trade since childhood</figcaption>
+        </figure>
+
+        <!-- Using the same image again until you add more photos -->
+        <figure class="tile">
+          <img src="images/truck.jpg" alt="LED sign service at height"ce at scale</figcaption>
+        </figure>
+
+        <figure class="tile">
+          <img src="images/truck.jpg" alt="Parking lot lighting service"lighting</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="story" aria-labelledby="about-title">
     <div class="wrap">
-      <h2 id="contact-title">Get in Touch</h2>
-      <div class="grid" style="grid-template-columns:1fr 1fr;">
+      <div class="stack">
         <div class="card">
-          <h3>Quick Contact</h3>
-          <p><strong>Phone:</strong> <a href="tel:+162930309‑2819</a></p>
-          <p><strong>Text:</strong> <a href="sms:+19Send a Text</a></p>
-          <p><strong>Email:</strong> <a href="mailto:BigDrake2K@gmail.comK@gmail.com</a></p>
-          <p class="muted">Serving Nashville and all of Middle Tennessee</p>
+          <h2 id="about-title">The NSL Story</h2>
+          <p>Owner <strong>Drake Ross</strong> was born and raised in Nashville and grew up helping his grandpa in the sign business—learning the family trade hands‑on from the time he was little. Today he’s a <strong>master licensed electrician</strong> who loves playing golf, serving others, and building long‑term relationships in the community.</p>
+          <p>Drake keeps a strong relationship with God and brings that care to every job: <em>“We treat each customer like we’re helping our own grandma.”</em> With NSL, you get honesty, craftsmanship, and a job done right the first time.</p>
+          <p><strong>Serving:</strong> Nashville & all of Middle Tennessee</p>
+          <div class="cta-row">
+            <a class="cta" href="tel:+09‑2819</a>
+            <a class="cta secondary" href="sms:+162930928        </div>
+        <div class="card" style="display:flex; align-items:center; justify-content:center; background-image:linear-gradient(135deg,#0f172a 0%, #0b1024 100%);">
+          <img src="images/Logo.jpeg" alt="Nashville Sign and Lighting logo" style="height:120px; width:auto; background:#fff; border-radius:10px; padding:8px; box-shadow:0 12px 24px rgba(0,0,0,.<h2 id="contact-title" style="margin:0 0 18px; font-size: clamp(22px, 4vw, 34px)">Let’s talk about your project</h2>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h3>Call</h3>
+          <p><a href="tel:+16293092819819</a></p>
+          <p class="muted">Mon–Fri 8:00 AM – 6:00 PM • After‑hours by appointment</p>
         </div>
-        <div class="card">
-          <h3>Working Hours</h3>
-          <p>Mon–Fri: 8:00 AM – 6:00 PM<br/>Sat–Sun: By appointment</p>
-          <p class="muted">Emergency & after‑hours support available—call for availability.</p>
+        <div class="contact-card">
+          <h3>Text</h3>
+          <p><a href="sms:+19Send a text to 629‑309‑2819</a></p>
+          <p class="muted">Quick answers & scheduling</p>
+        </div>
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p>mailto:BigDrake2K@gmail.comBigDrake2K@gmail.com</a></p>
+          <p class="muted">Send photos or specs—whatever helps</p>
         </div>
       </div>
     </div>
@@ -205,40 +254,39 @@
   <!-- Footer -->
   <footer role="contentinfo">
     <div class="wrap">
-      <div class="footflex">
-        <img src="images/Logo.jpeg" alt="Nashville0;">© <span id="year"></span> Nashville Sign and Lighting LLC • Middle Tennessee • All Rights Reserved</p>
+      <div class="foot">
+        <img srcogo.jpeg
+        <p style="margin:0">© <span id="year"></span> Nashville Sign and Lighting LLC — Middle Tennessee • All Rights Reserved</p>
       </div>
     </div>
   </footer>
 
-  <!-- Sticky Call (mobile) -->
+  <!-- Floating mobile call -->
   <div class="sticky-call" aria-label="Quick call">
-    <a href="3092819Call 629‑309‑2819</a>
+    <a href="tel:+1629309289‑309‑2819</a>
   </div>
 
-  <!-- Small helper script -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Inject basic JSON‑LD (LocalBusiness/Electrician). This helps SEO and can be read by search engines.
+    // Helpful structured data for local SEO
     (function(){
       const data = {
         "@context":"https://schema.org",
         "@type":"Electrician",
         "name":"Nashville Sign and Lighting LLC",
-        "url": location.origin,
+        "image":[ location.origin + "/images/truck.jpg", location.origin + "/images/Logo.jpeg" ],
         "telephone":"+1-629-309-2819",
         "areaServed":"Middle Tennessee",
-        "image":[ location.origin + "/images/truck.jpg", location.origin + "/images/Logo.jpeg" ],
-        "description":"All types of signage, lighting, and electrical services—residential & commercial.",
         "founder":"Drake Ross",
+        "url": location.origin,
+        "description":"All types of signage, lighting, and electrical services—residential & commercial.",
         "address":{ "@type":"PostalAddress", "addressLocality":"Nashville", "addressRegion":"TN", "addressCountry":"US" }
       };
       const s = document.createElement('script');
-      s.type = 'application/ld+json';
-      s.textContent = JSON.stringify(data);
+      s.type='application/ld+json'; s.textContent = JSON.stringify(data);
       document.head.appendChild(s);
     })();
   </script>
 </body>
 </html>
+``
