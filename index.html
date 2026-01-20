@@ -4,24 +4,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Nashville Sign and Lighting LLC | Signs • Lighting • Electrical</title>
 
-  <meta name="description" content="Nashville Sign and Lighting LLC provides professional signage, lighting, and electrical services for residential and commercial customers across Middle Tennessee." />
-  <meta name="keywords" content="Nashville sign company, sign installation Nashville, lighting services Nashville, electrician Nashville, commercial electrical, residential electrical" />
+  <meta name="description" content="Nashville Sign and Lighting LLC — Fully licensed and insured. Professional signage, lighting, and electrical services for Nashville and surrounding areas." />
+  <meta name="keywords" content="Nashville sign company, signage, channel letters, pylon signs, sign cabinets, banners, custom signage, lighting services, electrician Nashville, licensed and insured, Middle Tennessee" />
+  <meta name="color-scheme" content="light dark" />
 
   <style>
     :root{
-      --primary:#0f172a;
-      --primary-dark:#020617;
-      --accent:#ffb20f;
-      --bg:#f8fafc;
-      --card:#ffffff;
-      --text:#0b1220;
-      --muted:#6b7280;
-      --border:#e5e7eb;
+      --ink:#0b1220;          /* deep text */
+      --bg:#f7f9fc;           /* subtle page bg */
+      --brand:#0f172a;        /* header gradient base */
+      --brand2:#020617;       /* header gradient end */
+      --accent:#ffb20f;       /* yellow call button */
+      --card:#ffffff;         /* cards */
+      --ring:#e5e7eb;         /* borders */
+      --muted:#6b7280;        /* muted text */
+    }
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0; font-family: ui-sans-serif, -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif; background:var(--bg); color:var(--ink); }
+
+    /* Header */
+    .header{
+      position:sticky; top:0; z-index:50;
+      background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 18px; }
+    .header-inner{
+      display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0;
+    }
+    .brand{
+      margin:0; font-size: clamp(20px, 2.4vw, 26px); font-weight:900; letter-spacing:.2px;
+    }
+    .call-btn{
+      background:var(--accent); color:#111; font-weight:900;
+      padding:10px 16px; border-radius:10px; text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+      box-shadow:0 10px 24px rgba(0,0,0,.28);
+    }
+    .call-btn svg{ display:block }
+
+    /* Hero (text only) */
+    .hero{
+      background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff; text-align:center;
+      padding:64px 18px 72px;
+    }
+    .hero h1{
+      margin:0; font-size: clamp(30px, 6vw, 56px); font-weight: 900; line-height:1.08;
+    }
+    .hero h2{
+      margin:8px 0 12px; font-size: clamp(22px, 4.8vw, 36px); font-weight: 800; opacity:.98;
+    }
+    .hero .big-phone{
+      margin:10px 0 14px; font-size: clamp(22px, 4.6vw, 34px); font-weight: 900; letter-spacing:.02em;
+    }
+    .hero .big-phone a{ color:var(--accent); text-decoration:none }
+    .badges{
+      display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:8px;
+    }
+    .badge{
+      background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.2); color:#e6edf7;
+      font-size:12px; letter-spacing:.06em; text-transform:uppercase; padding:6px 10px; border-radius:999px;
     }
 
-    *{ box-sizing:border-box; }
+    /* Sections */
+    section{ padding:64px 0 }
+    .section-title{
+      margin:0 0 16px; text-align:center; font-size: clamp(22px, 4vw, 32px);
+    }
+    .section-sub{
+      margin:0 auto 26px; text-align:center; color:var(--muted); max-width:820px;
+      font-size: clamp(14px, 2.6vw, 18px);
+    }
+    .cards{
+      display:grid; grid-template-columns:repeat(12,1fr); gap:18px;
+    }
+    .card{
+      grid-column: span 12;
+      background:var(--card); border:1px solid var(--ring); border-radius:16px; padding:24px;
+      box-shadow:0 10px 24px rgba(0,0,0,.06);
+    }
+    .card h3{ margin:0 0 8px; font-size:20px }
+    .list{ margin:0; padding-left:18px; color:var(--muted); line-height:1.6 }
+    @media (min-width: 760px){
+      .card{ grid-column: span 4 }
+    }
 
-    html,body{
+    /* Contact (links only; no forms) */
+    .contact{
+      background:#eef2ff; border-top:1px solid var(--ring);
+    }
+    .contact-grid{
+      display:grid; grid-template-columns:repeat(12,1fr); gap:18px; max-width:900px; margin:0 auto;
+    }
+    .contact-box{
+      grid-column: span 12; text-align:center; background:#fff; border:1px solid var(--ring); border-radius:16px; padding:22px;
+      box-shadow:0 10px 24px rgba(0,0,0,.06);
+    }
+    .contact-box h4{ margin:0 0 10px }
+    .contact-box a{ color:#111; font-weight:800; text-decoration:none }
+    @media (min-width: 760px){
+      .contact-box{ grid-column: span 4 }
+    }
+
+    /* Footer */
+    footer{
+      background:#020617; color:#cbd5f5; text-align:center; padding:24px 18px; border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    /* Sticky mobile call */
+    .sticky-call{
+      position:fixed; left:0; right:0; bottom:0; z-index:60; display:none; background:#0b1220cc; padding:8px 12px; border-top:1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(6px);
+    }
+    .sticky-call a{
+      display:block; text-align:center; background:var(--accent); color:#111; font-weight:900; padding:12px 18px; border-radius:12px; text-decoration:none;
+    }
+    @media (max-width: 840px){
+      .sticky-call{ display:block }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="wrap header-inner">
+      <p class="brand" aria-label="Company Name">Nashville Sign and Lighting LLC</p>
